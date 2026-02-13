@@ -1,0 +1,482 @@
+/* ========== RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+
+/* ========== HEADER ========== */
+.header {
+    background: white;
+    padding: 15px 30px;
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 5%;
+    width: 120px;
+}
+
+.nav-center {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: #6BCB77;
+}
+
+.nav-icon-img {
+    width: 27px;
+    height: 27px;
+    color: white;
+    border-radius: 50%;
+    background: white;
+    z-index: 9999;
+}
+
+.nav-text {
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.version {
+    background:black ;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ========== FILTER BAR ========== */
+.filter-bar {
+    background: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+}
+
+/* Filter Group (Country + Language) */
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Sticker Images beside Country and Language */
+.filter-sticker {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* Dropdowns */
+.filter-select {
+    padding: 10px 15px;
+    border: 5px solid #FFD93D;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: bold;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    color: #333;
+}
+
+nav a img {
+    color: white;
+    width: 333px;
+}
+
+.filter-select:focus {
+    border-color: #6BCB77;
+}
+
+/* Search Bar (Middle) */
+.filter-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border: 4px solid  black;
+    border-radius: 8px;
+    padding: 8px 10px;
+
+}
+
+
+
+.search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 19px;
+    outline: none;
+    padding: px;
+}
+
+.search-btn {
+    background:blue;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    opacity: 0.9;
+}
+
+/* ========== MAIN CONTENT - SPLIT LAYOUT ========== */
+.main-content {
+    display: flex;
+    gap: 0;
+    min-height: calc(100vh - 130px);
+    padding: 50px;
+    gap: 15px;
+}
+
+/* Each Side */
+.content-side {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    overflow-y: auto;
+    max-height: calc(100vh - 160px);
+}
+
+/* Side Titles */
+.side-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    color: #333;
+    position: sticky;
+    top: -3%;
+    background: white;
+    z-index: 10;
+}
+
+/* Divider between left and right */
+.divider {
+    width: 3px;
+
+    border-radius: 3px;
+    min-height: 200px;
+}
+
+/* ========== TEXT GRID (LEFT SIDE) ========== */
+.text-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Text Meme Card */
+.text-card {
+    background: white;
+    border: 2px solid #3e3203;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.text-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 217, 61, 0.3);
+}
+
+.text-card p {
+    font-size: 34px;
+    line-height: 1.6;
+    color: grey;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.text-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 8px;
+}
+
+.text-card-footer span {
+    color: #6BCB77;
+    font-weight: bold;
+}
+
+/* ========== IMAGE GRID (RIGHT SIDE) ========== */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Image Meme Card */
+.image-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.image-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(107, 203, 119, 0.3);
+    border-color: #6BCB77;
+}
+
+.image-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-card-caption {
+    padding: 10px;
+    font-size: 35px;
+    color: #555;
+    text-align: center;
+}
+
+/* ========== LOADING STATE ========== */
+.loading-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 43px;
+color: green;
+    font-size: 18px;
+    
+}
+
+/* ========== ERROR STATE ========== */
+.error-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #ff6b6b;
+    font-size: 16px;
+}
+
+/* ========== EMPTY STATE ========== */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+
+.dude {
+    font-size: 18px;
+}
+
+
+
+.footer {
+    background: #1a1a2e;
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Top - 4 Columns */
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #667eea;
+}
+
+.footer-text {
+    font-size: 22px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    background: #667eea;
+    transform: translateY(-3px);
+}
+
+.social-link img {
+    width: 22px;
+    height: 23px;
+    filter: brightness(0) invert(1); /* Make icons white */
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #667eea;
+}
+
+/* Footer Contact */
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-contact  a{
+font-size: 30px;
+color: rgba(255, 255, 255, 0.744);
+}
+
+.footer-contact li {
+    color: rgba(255,255,255,0.7);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 22px;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-bottom-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.footer-bottom-links a:hover {
+    color: #667eea;
+}
+
+.footer-bottom-links span {
+    color: rgba(255,255,255,0.3);
+}
+
+/* ========== RESPONSIVE ========== */
+
