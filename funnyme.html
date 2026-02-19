@@ -196,4 +196,198 @@
 
     <script src="./js/funny.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funnyme - Happy Me</title>
+    <link rel="stylesheet" href="./css/funnym.css">
+    <link rel="stylesheet" href="./css/funnyme.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../images/Minimalist_Brand_Guidelines_Presentation_-removebg-preview.png" alt="Happy Me Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav-center">
+            <a href="./index.html" class="nav-item">
+                <img src="../images/home.png" alt="Home" class="nav-icon-img">
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="./about.html" class="nav-item">
+                <img src="../images/page (1).png" alt="About" class="nav-icon-img">
+                <span class="nav-text">About Us</span>
+            </a>
+            <a href="./funnyme.html" class="nav-item">
+                <img src="../images/laugh.png" alt="Funnyme" class="nav-icon-img">
+                <span class="nav-text">Funnyme</span>
+            </a>
+        </nav>
+        <div class="version">v0.01</div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+    </header>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+
+        <!-- Country (Left) with laugh image -->
+        <div class="filter-group">
+            <img src="../images/lol.png" alt="laugh" class="filter-sticker">
+            <select id="countrySelect" class="filter-select">
+                <option value="nigeria">🇳🇬 Nigeria</option>
+                <option value="usa">🇺🇸 USA</option>
+                <option value="uk">🇬🇧 UK</option>
+                <option value="ghana">🇬🇭 Ghana</option>
+                <option value="india">🇮🇳 India</option>
+                <option value="south-africa">🇿🇦 South Africa</option>
+            </select>
+        </div>
+
+        
+
+        <!-- Search Bar (Middle) -->
+        <div class="filter-search">
+        
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search " 
+                class="search-input"
+            >
+            <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+
+        <!-- Mode (Right) -->
+        <div class="filter-group">
+            <select id="modeSelect" class="filter-select">
+                <option value="all">All Content</option>
+                <option value="text">Text Only</option>
+                <option value="image">Images Only</option>
+            </select>
+        </div>
+
+        <!-- Language (Right) with sticker image -->
+       
+
+    </div>
+
+    <!-- MAIN CONTENT - SPLIT LAYOUT -->
+    <div class="main-content">
+
+        <!-- LEFT SIDE: TEXT MEMES -->
+        <div class="content-side left-side">
+            <h2 class="side-title"> Text Memes</h2>
+            <div class="text-grid" id="textGrid">
+                <!-- Text jokes will load here -->
+                <div class="loading-state">
+                    <p> Loading jokes...😂😂😁</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="divider"></div>
+
+        <!-- RIGHT SIDE: IMAGE MEMES -->
+        <div class="content-side right-side">
+            <h2 class="side-title">Image Memes</h2>
+            <div class="image-grid" id="imageGrid">
+                <!-- Images will load here -->
+                <div class="loading-state">
+                    <p>🖼️ Loading memes...</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+            <!-- Column 1: About -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Happy Me</h3>
+                <p class="footer-text">
+                    Making the world happier, one smile at a time. 
+                    Find joy in your language and culture.
+                </p>
+                <!-- Social Media Icons -->
+               <div class="social-icons">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="../images/logo2.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="../images/logo3.png" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="../images/logo4.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <img src="../images/logo2.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../homepage/index.html">Home</a></li>
+                    <li><a href="../aboutpage/index.html">About Us</a></li>
+                    <li><a href="../funnyme/index.html">Funnyme</a></li>
+                   
+                </ul>
+            </div>
+
+            <!-- Column 3: Categories -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="text-jokes.html">Text Jokes</a></li>
+                    <li><a href="image-memes.html">Image Memes</a></li>
+                    <li><a href="gifs.html">Funny GIFs</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Contact Us</h3>
+                <ul class="footer-contact">
+                    <li>📧 hello@happyme.com</li>
+                    <li>📱 +234 081572401578</li>
+                    <li>Osun state, Nigeria</li>
+                     <a  href="https://osunboy.netlify.app/">Contact Developer</a>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Happy Me. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <span>|</span>
+                <a href="#">Terms of Service</a>
+                <span>|</span>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+    <script src="./js/funny.js"></script>
+</body>
+>>>>>>> a209c3f39f65dc587952aef1d3abd3719a56f825
 </html>
